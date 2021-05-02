@@ -1,0 +1,8 @@
+Options -Indexes
+
+<IFModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteCond %{SCRIPT_FILENAME} !-d
+    RewriteCond %{SCRIPT_FILENAME} !-f
+    RewriteRule ^([A-Za-z0-9-\/&_]+)/?$ index.php?etc=$1 [L]
+</IfModule>
